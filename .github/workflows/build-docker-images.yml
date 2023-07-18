@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'feature/permit-unicode-string'
     paths:
       - 'docker/base.Dockerfile'
       - 'docker/dev.Dockerfile'
@@ -40,7 +41,7 @@ jobs:
         file: docker/base.Dockerfile
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: ghcr.io/ietf-tools/xml2rfc-base:latest
+        tags: ghcr.io/yviscuit/xml2rfc-base:latest
 
     - name: Dev image - Docker Build & Push
       uses: docker/build-push-action@v3
@@ -49,4 +50,4 @@ jobs:
         file: docker/dev.Dockerfile
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: ghcr.io/ietf-tools/xml2rfc-dev:latest
+        tags: ghcr.io/yviscuit/xml2rfc-dev:latest
