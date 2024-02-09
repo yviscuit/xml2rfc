@@ -37,6 +37,7 @@ unicode_content_tags = set([
     'u',
     't',
     'li',
+    'th',
     'td',
 ])
 
@@ -90,6 +91,7 @@ bare_latin_tags = set([
 bare_unicode_tags_with_notice = set([
     't',
     'li',
+    'th',
     'td',
 ])
 
